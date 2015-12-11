@@ -1,0 +1,27 @@
+/**
+	Incluir aquí las reglas css propias de este proyecto 
+*/
+#logo_cav_impresion{
+	margin: auto;
+}
+#barra_superior {
+	/*background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    left bottom,
+	    color-stop(0.5, #5368a1),
+	    color-stop(0.5, #244268)
+	);
+	background-image: -moz-linear-gradient(
+	    center top,
+	    #5368a1 50%,
+	    #234068 50%
+	);*/
+	background-color:#91c84b;	
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#5368a1, endColorstr=#244268)";
+	
+	border: #082d5a 1px solid ;
+	border-bottom: 1px solid #002556;
+	color: white;
+	min-height: 38px;
+}
