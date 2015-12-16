@@ -423,7 +423,7 @@ INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, colum
 	'burgos_v2', --objeto_proyecto
 	'2431', --objeto
 	'1067', --col_id
-	'motivo_consuta', --columna
+	'motivo_consulta', --columna
 	'X', --tipo
 	'0', --pk
 	'', --secuencia
@@ -452,20 +452,6 @@ INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, colum
 	'2431', --objeto
 	'1069', --col_id
 	'organismo', --columna
-	'C', --tipo
-	'0', --pk
-	'', --secuencia
-	'30', --largo
-	NULL, --no_nulo
-	'0', --no_nulo_db
-	'0', --externa
-	'expedientes'  --tabla
-);
-INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, columna, tipo, pk, secuencia, largo, no_nulo, no_nulo_db, externa, tabla) VALUES (
-	'burgos_v2', --objeto_proyecto
-	'2431', --objeto
-	'1070', --col_id
-	'dependencia_org', --columna
 	'C', --tipo
 	'0', --pk
 	'', --secuencia
@@ -662,6 +648,48 @@ INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, colum
 	'2431', --objeto
 	'1117', --col_id
 	'nro_expediente_judicial', --columna
+	'C', --tipo
+	'0', --pk
+	'', --secuencia
+	'30', --largo
+	NULL, --no_nulo
+	'0', --no_nulo_db
+	'0', --externa
+	'expedientes'  --tabla
+);
+INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, columna, tipo, pk, secuencia, largo, no_nulo, no_nulo_db, externa, tabla) VALUES (
+	'burgos_v2', --objeto_proyecto
+	'2431', --objeto
+	'1119', --col_id
+	'planificacion', --columna
+	'X', --tipo
+	'0', --pk
+	'', --secuencia
+	NULL, --largo
+	NULL, --no_nulo
+	'0', --no_nulo_db
+	'0', --externa
+	'expedientes'  --tabla
+);
+INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, columna, tipo, pk, secuencia, largo, no_nulo, no_nulo_db, externa, tabla) VALUES (
+	'burgos_v2', --objeto_proyecto
+	'2431', --objeto
+	'1120', --col_id
+	'evaluacion', --columna
+	'X', --tipo
+	'0', --pk
+	'', --secuencia
+	NULL, --largo
+	NULL, --no_nulo
+	'0', --no_nulo_db
+	'0', --externa
+	'expedientes'  --tabla
+);
+INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, columna, tipo, pk, secuencia, largo, no_nulo, no_nulo_db, externa, tabla) VALUES (
+	'burgos_v2', --objeto_proyecto
+	'2431', --objeto
+	'1132', --col_id
+	'dependencia_org', --columna
 	'C', --tipo
 	'0', --pk
 	'', --secuencia

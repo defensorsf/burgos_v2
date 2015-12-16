@@ -16,8 +16,8 @@ INSERT INTO apex_objeto (proyecto, objeto, anterior, identificador, reflexivo, c
 	'toba', --clase_proyecto
 	'toba_ei_formulario_ml', --clase
 	'14', --punto_montaje
-	NULL, --subclase
-	NULL, --subclase_archivo
+	'ml_profesionales', --subclase
+	'expedientes/edicion/ml_profesionales.php', --subclase_archivo
 	NULL, --objeto_categoria_proyecto
 	NULL, --objeto_categoria
 	'Gestionar Expediente - editor - ml_profesionales', --nombre
@@ -154,7 +154,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	NULL, --estado_defecto
 	'0', --solo_lectura
 	'0', --solo_lectura_modificacion
-	'get_seleccion_personal', --carga_metodo
+	'get_seleccion_profesional', --carga_metodo
 	NULL, --carga_clase
 	NULL, --carga_include
 	'2453', --carga_dt

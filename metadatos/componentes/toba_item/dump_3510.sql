@@ -1,5 +1,5 @@
 ------------------------------------------------------------
---[3510]--  Gestionar Expediente 
+--[3510]--  Carga de datos 
 ------------------------------------------------------------
 
 ------------------------------------------------------------
@@ -23,7 +23,7 @@ INSERT INTO apex_item (item_id, proyecto, item, padre_id, padre_proyecto, padre,
 	NULL, --actividad_buffer
 	NULL, --actividad_patron_proyecto
 	NULL, --actividad_patron
-	'Gestionar Expediente', --nombre
+	'Carga de datos', --nombre
 	NULL, --descripcion
 	'14', --punto_montaje
 	NULL, --actividad_accion

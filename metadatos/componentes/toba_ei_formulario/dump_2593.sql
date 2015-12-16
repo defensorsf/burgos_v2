@@ -147,19 +147,19 @@ INSERT INTO apex_objeto_ut_formulario (objeto_ut_formulario_proyecto, objeto_ut_
 				[ef id=fecha_entrada]</td>
 		</tr>
 		<tr>
-			<td colspan = "2">
+			<td colspan="2">
 				[ef id=barra2]</td>
 		</tr>
 		<tr>
-			<td colspan = "2">
-				[ef id=motivo_consuta]</td>
-			</tr>
+			<td colspan="2">
+				[ef id=motivo_consulta]</td>
+		</tr>
 		<tr>
-		<td colspan = "2">
+			<td colspan="2">
 				[ef id=barra3]</td>
 		</tr>
 		<tr>
-			<td colspan = "2">
+			<td colspan="2">
 				[ef id=observaciones]</td>
 		</tr>
 	</tbody>
@@ -497,13 +497,13 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'5944', --objeto_ei_formulario_fila
 	'2593', --objeto_ei_formulario
 	'burgos_v2', --objeto_ei_formulario_proyecto
-	'motivo_consuta', --identificador
+	'motivo_consulta', --identificador
 	'ef_editable_textarea', --elemento_formulario
-	'motivo_consuta', --columnas
+	'motivo_consulta', --columnas
 	'0', --obligatorio
 	'0', --oculto_relaja_obligatorio
 	'9', --orden
-	'Motivo del <br>Oficio', --etiqueta
+	'Motivo', --etiqueta
 	NULL, --etiqueta_estilo
 	NULL, --descripcion
 	NULL, --colapsado
@@ -583,7 +583,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'1', --obligatorio
 	'0', --oculto_relaja_obligatorio
 	'3', --orden
-	'Fecha <br>presentacion', --etiqueta
+	'Fecha <br>Inicio', --etiqueta
 	NULL, --etiqueta_estilo
 	NULL, --descripcion
 	'0', --colapsado

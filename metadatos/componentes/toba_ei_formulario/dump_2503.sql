@@ -166,7 +166,7 @@ INSERT INTO apex_objeto_ut_formulario (objeto_ut_formulario_proyecto, objeto_ut_
 		</tr>
 		<tr>
 			<td colspan="2">
-				[ef id=motivo_consuta]</td>
+				[ef id=motivo_consulta]</td>
 		</tr>
 		<tr>
 			<td colspan="2">
@@ -197,7 +197,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'1', --obligatorio
 	'0', --oculto_relaja_obligatorio
 	'4', --orden
-	'Fecha <br>presentacion', --etiqueta
+	'Fecha <br>Inicio', --etiqueta
 	NULL, --etiqueta_estilo
 	NULL, --descripcion
 	'0', --colapsado
@@ -690,7 +690,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	NULL, --estado_defecto
 	'0', --solo_lectura
 	'0', --solo_lectura_modificacion
-	'get_descripciones', --carga_metodo
+	'get_descripciones_sin_judicial', --carga_metodo
 	NULL, --carga_clase
 	NULL, --carga_include
 	'2525', --carga_dt
@@ -777,7 +777,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	NULL, --carga_consulta_php
 	NULL, --carga_sql
 	'burgos_v2', --carga_fuente
-	'Personal,Telefónica,Correo Electrónico, Carta', --carga_lista
+	'Presencial,Telefónica,Correo Electrónico, Nota', --carga_lista
 	NULL, --carga_col_clave
 	NULL, --carga_col_desc
 	NULL, --carga_maestros
@@ -1151,13 +1151,13 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'5879', --objeto_ei_formulario_fila
 	'2503', --objeto_ei_formulario
 	'burgos_v2', --objeto_ei_formulario_proyecto
-	'motivo_consuta', --identificador
+	'motivo_consulta', --identificador
 	'ef_editable_textarea', --elemento_formulario
-	'motivo_consuta', --columnas
+	'motivo_consulta', --columnas
 	'0', --obligatorio
 	'0', --oculto_relaja_obligatorio
 	'13', --orden
-	'Motivo de <br>la Consulta', --etiqueta
+	'Motivo', --etiqueta
 	NULL, --etiqueta_estilo
 	NULL, --descripcion
 	NULL, --colapsado

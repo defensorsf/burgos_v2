@@ -16,8 +16,8 @@ INSERT INTO apex_objeto (proyecto, objeto, anterior, identificador, reflexivo, c
 	'toba', --clase_proyecto
 	'toba_ei_cuadro', --clase
 	'14', --punto_montaje
-	'ei_cuadro', --subclase
-	'extension_toba/componentes/hoja_de_ruta/ei_cuadro.php', --subclase_archivo
+	'cuadro_hoja_ruta', --subclase
+	'extension_toba/componentes/hoja_de_ruta/cuadro_hoja_ruta.php', --subclase_archivo
 	NULL, --objeto_categoria_proyecto
 	NULL, --objeto_categoria
 	'Hoja de Ruta - cuadro', --nombre
@@ -60,8 +60,8 @@ INSERT INTO apex_objeto_cuadro (objeto_cuadro_proyecto, objeto_cuadro, titulo, s
 	'10', --tamano_pagina
 	'P', --tipo_paginado
 	'1', --mostrar_total_registros
-	'0', --eof_invisible
-	'Ingrese un criterio válido de búsqueda', --eof_customizado
+	'1', --eof_invisible
+	NULL, --eof_customizado
 	'1', --siempre_con_titulo
 	'1', --exportar_paginado
 	'1', --exportar
