@@ -186,27 +186,37 @@ class consultas
 	/*--------------------------------------------
 	----------------Estadisticas----------------------
 	----------------------------------------------*/
-	static function expedientes_iniciados($desde,$hasta){
+	static function expedientes_iniciados($where_s){
 		$sql= 	"SELECT count(ex.id) AS ex_iniciados
-				 FROM expedientes.ex
-				 WHERE ex.fecha_presentacion BETWEEN " .quote($desde) . ' AND ' .quote($hasta);
+				FROM expedientes AS ex
+				INNER JOIN vw_personas_rol AS pr 
+				ON pr.id_expediente = ex.id
+				WHERE $where_s";
 		return toba::db()->consultar($sql);		
+		
 	}
 	
-	static function conteo_violencias($desde,$hasta){
+	static function conteo_violencias_g($where_s){		
+		
 		$sql= 	"SELECT conteo.cantidad, tv.nombre
 				FROM
 					(SELECT COUNT(id) AS cantidad, id_violencia  
 					FROM  (
 							SELECT id, violencia_1 AS id_violencia 
-								FROM expedientes 
-								WHERE fecha_presentacion BETWEEN ". quote($desde) . " AND  ". quote($hasta) . "  AND violencia_1 IS NOT NULL
+								FROM expedientes AS ex
+								INNER JOIN vw_personas_rol AS pr 
+								ON pr.id_expediente = ex.id
+								WHERE $where_s  AND violencia_1 IS NOT NULL
 							UNION SELECT id, violencia_2 AS id_violencia 
-								FROM expedientes 
-								WHERE fecha_presentacion BETWEEN  ". quote($desde) . "  AND ". quote($hasta) . " AND violencia_2 IS NOT NULL
+								FROM expedientes AS ex
+								INNER JOIN vw_personas_rol AS pr 
+								ON pr.id_expediente = ex.id
+								WHERE $where_s  AND violencia_2 IS NOT NULL
 							UNION SELECT id, violencia_3 AS id_violencia 
-								FROM expedientes 
-								WHERE fecha_presentacion BETWEEN  ". quote($desde) . "  AND ". quote($hasta) . " AND violencia_3 IS NOT NULL
+								FROM expedientes AS ex
+								INNER JOIN vw_personas_rol AS pr 
+								ON pr.id_expediente = ex.id
+								WHERE $where_s  AND violencia_3 IS NOT NULL
 							) AS plano
 					GROUP BY id_violencia)AS conteo		
 				JOIN tipos_violencias AS tv
@@ -215,23 +225,29 @@ class consultas
 	
 	}
 
-	static function conteo_nomecladores($desde,$hasta){
+	static function conteo_nomecladores($where_s){
 		$sql= 	"SELECT conteo.cantidad, tv.nombre
 				FROM
 					(SELECT COUNT(id) AS cantidad, id_nomeclador 
 					FROM  (
 							SELECT id, nomeclador_1 AS id_nomeclador 
-								FROM expedientes 
-								WHERE fecha_presentacion BETWEEN ". quote($desde) . " AND  ". quote($hasta) . "  AND nomeclador_1 IS NOT NULL
+								FROM expedientes AS ex
+								INNER JOIN vw_personas_rol AS pr 
+								ON pr.id_expediente = ex.id
+								WHERE $where_s AND nomeclador_1 IS NOT NULL
 							UNION SELECT id, nomeclador_2 AS id_nomeclador 
-								FROM expedientes 
-								WHERE fecha_presentacion BETWEEN  ". quote($desde) . "  AND ". quote($hasta) . " AND nomeclador_2 IS NOT NULL
+								FROM expedientes AS ex
+								INNER JOIN vw_personas_rol AS pr 
+								ON pr.id_expediente = ex.id
+								WHERE $where_s AND nomeclador_2 IS NOT NULL
 							UNION SELECT id, nomeclador_3 AS id_nomeclador 
-								FROM expedientes 
-								WHERE fecha_presentacion BETWEEN  ". quote($desde) . "  AND ". quote($hasta) . " AND nomeclador_3 IS NOT NULL
+								FROM expedientes AS ex
+								INNER JOIN vw_personas_rol AS pr 
+								ON pr.id_expediente = ex.id
+								WHERE $where_s AND nomeclador_3 IS NOT NULL
 							) AS plano
 					GROUP BY id_nomeclador)AS conteo		
-				JOIN tipos_nomeclador AS tv
+				JOIN tipos_casos AS tv
 				ON tv.id = conteo.id_nomeclador ";
 		return toba::db()->consultar($sql);		
 	
