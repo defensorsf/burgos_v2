@@ -97,7 +97,7 @@ class dt_expedientes extends toba_datos_tabla
 	function get_select_expedientes($filtro=array(), $rol = null)
 	{
 		$where = array();
-		$campo_persona =  '';//',1 AS datos_persona';
+		$campo_persona =  '';
 		$join_persona = '';
 		if (isset($filtro['numero'])) {
 			$where[] = $this->operacion_filtro('numero','ex.numero', $filtro);
@@ -162,14 +162,15 @@ class dt_expedientes extends toba_datos_tabla
 					ex.numero,
 					ex.fecha_presentacion,
 					ex.lugar,
-					'responsable' AS nombre_responsable_ingreso,
 					ex.procedencia,
 					tc.nombre as nomeclador,
 					CASE
 						 WHEN estado = 0 THEN 'En proceso'
 						 WHEN estado = 1 THEN 'Pase a Archivo'
 						 WHEN estado = 2 THEN 'Archivado'
-					END AS estado 
+					END AS estado,
+					victimas(ex.id),
+					responsables(ex.id)
 					$campo_persona
 					FROM expedientes AS ex
 				$join_persona  

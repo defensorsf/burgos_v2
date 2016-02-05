@@ -10,8 +10,9 @@ class ci_de_oficio extends burgos_v2_ci
 	{
 		
 		$this->cn()->sincronizar();
-		toba::notificacion()->agregar('Se guardó correctamente','info');
-		$this->cn()->resetear();
+//        toba::notificacion()->agregar('Se guardó correctamente','info');
+//        $this->cn()->resetear();
+		$this->set_pantalla('pant_comprobante');
 	}
 
 	function evt__cancelar()
@@ -82,5 +83,24 @@ class ci_de_oficio extends burgos_v2_ci
 	}
 
 
+	//-----------------------------------------------------------------------------------
+	//---- frm_mostar_expediente --------------------------------------------------------
+	//-----------------------------------------------------------------------------------
+
+	function conf__frm_mostar_expediente(burgos_v2_ei_formulario $form)
+	{
+		$form->set_datos($this->cn()->get_expediente());
+	}
+
+	//-----------------------------------------------------------------------------------
+	//---- frm_mostrar_profesional ------------------------------------------------------
+	//-----------------------------------------------------------------------------------
+
+	function conf__frm_mostrar_profesional(burgos_v2_ei_formulario $form)
+	{
+		$form->set_datos($this->cn()->get_primer_profesional()[0]);
+	}
+	 //-----------------------------------------------------------------------------------
+	
 }
 ?>
